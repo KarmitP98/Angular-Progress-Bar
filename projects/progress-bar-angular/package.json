@@ -1,0 +1,30 @@
+{
+  "name" : "progress-bar-angular" ,
+  "version" : "0.0.3" ,
+  "peerDependencies" : {
+    "@angular/common" : "~13.1.1" ,
+    "@angular/core" : "~13.1.1"
+  } ,
+  "dependencies" : {
+    "tslib" : "^2.3.0"
+  } ,
+  "author" : {
+    "email" : "karmit199@gmail.com" ,
+    "name" : "Karmit Patel" ,
+    "url" : "https://karmitp.com/"
+  } ,
+  "description" : "An angular progress bar module to quickly setup a clean looking progress bar. Derived from the Material Progress Bar with additional controls and styles." ,
+  "license" : "MIT" ,
+  "main" : "src/lib/progress-bar-angular.component.ts" ,
+  "keywords" : [
+    "angular" ,
+    "progres-bar" ,
+    "loader" ,
+    "progress" ,
+    "bar" ,
+    "angular 2.0" ,
+    "animated" ,
+    "angular-progress-bar" ,
+    "progress-bar-angular"
+  ]
+}
