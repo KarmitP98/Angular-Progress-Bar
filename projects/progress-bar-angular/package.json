@@ -26,5 +26,11 @@
     "animated" ,
     "angular-progress-bar" ,
     "progress-bar-angular"
-  ]
+  ],
+  "readme" : "Check file README.md",
+  "repository" : {
+    "url" : "https://github.com/KarmitP98/Angular-Progress-Bar.git",
+    "type" : "git",
+    "directory" : "projects/progress-bar-angular"
+  }
 }
