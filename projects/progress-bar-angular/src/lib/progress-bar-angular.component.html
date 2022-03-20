@@ -1,3 +1,13 @@
-<div class='progress-bar'>
-  <div [ngClass]='mode' [style.--progress]='progress || 0' class='progress'></div>
+<div
+  [style.--backgroundColor]='backgroundColor || "#ffffff"' [style.--height]='height || "20px"'
+  [style.--width]='width || "100%"'
+  class='progress-bar'
+>
+  <div
+    [ngClass]='[mode, animatedBuffer ? "animatedBuffer" : ""]'
+    [style.--buffer-bar-color]='bufferProgressBarColor'
+    [style.--progress-bar-color]='progressBarColor'
+    [style.--progress]='progress'
+    class='progress'
+  ></div>
 </div>
