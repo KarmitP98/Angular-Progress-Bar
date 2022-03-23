@@ -1,20 +1,20 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {ProgressBarAngularBarColor, ProgressBarAngularMode} from './progress-bar-angular.model';
 
-export type ProgressBarMode = 'determinate' | 'query' | 'indeterminate';
 
 @Component({
   selector: 'progress-bar-angular',
   templateUrl: './progress-bar-angular.component.html',
-  styleUrls: ['./progress-bar-angular.component.scss']
+  styleUrls: ['./progress-bar-angular.component.scss','progress-bar-global.scss']
 })
 export class ProgressBarAngularComponent implements OnInit {
 
   /**
    * Mode of progress bar
-   * Any of 'determinate' | 'indeterminate' | 'query'
-   * @type {ProgressBarMode}
+   * Any of 'determinate' | 'indeterminate' | 'query' | 'buffer'
+   * @type {ProgressBarAngularMode}
    */
-  @Input() mode: ProgressBarMode = 'determinate';
+  @Input() mode: ProgressBarAngularMode = 'determinate';
   /**
    * Progress Values of Progress Bar: Accepted Values are numbers between 0 and 100
    * @type {number}
@@ -32,7 +32,7 @@ export class ProgressBarAngularComponent implements OnInit {
    * string[]: Linear Gradient color.
    * @type {string | string[]}
    */
-  @Input() barColor?: string | string[];
+  @Input() barColor?: ProgressBarAngularBarColor;
   /**
    * Height of the progress bar.
    * Inputs: '10px' | '10%' | '10rem' | ... etc.
@@ -49,7 +49,7 @@ export class ProgressBarAngularComponent implements OnInit {
    * Selector to animate the 'buffer' progress-bar.
    * @type {boolean}
    */
-  @Input() animatedBuffer = true;
+  @Input() animatedBuffer: boolean = true;
 
   progressBarColor = '#000000';
   bufferProgressBarColor = 'repeating-linear-gradient(to bottom right, #000000 0px, #000000 10px, #ffffff 10px, #ffffff 20px)';

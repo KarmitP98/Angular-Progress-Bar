@@ -5,3 +5,4 @@
 export * from './lib/progress-bar-angular.service';
 export * from './lib/progress-bar-angular.component';
 export * from './lib/progress-bar-angular.module';
+export * from './lib/progress-bar-angular.model';
