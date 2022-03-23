@@ -45,15 +45,16 @@ Stackblitz: https://angular-ivy-gnw58u.stackblitz.io
 
 ## List of Inputs ##
 
-1. mode(required): Mode the progress bar (determinate | indeterminate | query | buffer)
-2. progress(required): Progress of the bar ( 0 <-> 100)
-3. backgroundColor(optional): Background color of the progress bar container (#FFFFFF | rgba(255,255,255,1) |
-   linear-gradient(<angle>, ...<colors>)) ... etc.
-4. barColor(optional): Background color of the progress bar (#FFFFF or ['#FFFFFF', '#000000])
-5. height(optional): Height of the progress bar (10px | 10em | 10% ... etc).
-6. width(optional): Width of the progress bar (10px | 10em | 10% ... etc).
-7. animatedBuffer(optional): Boolean values sets the buffer progress bar to be animated or not.
-8. borderRadius(optional): Border Radius of the Progress Bar.
+|    **Input**    |            **Type**            | **Controls** |     **Default**      |                                **Accepted Values**                                | **Description**                                |
+|:---------------:|:------------------------------:|:------------:|:--------------------:|:---------------------------------------------------------------------------------:|------------------------------------------------|
+|      mode       |     ProgressBarAngularMode     |   required   |  `"indeterminate"`   |          `"indeterminate"` or `"determinate"` or `"query"` or `"buffer"`          | Mode the progress bar                          |
+|    progress     |             number             |   optional   |         `0`          |                              0 <= `progress` <= 100                               | Progress of the bar                            |
+|    barColor     |     ProgressBarAngularMode     |   optional   |       `"#000"`       | `"<HEX_COLOR>"` or `"<RGBA_COLOR>"` or `"[HEX_COLOR, HEX_COLOR, RGBA_COLOR,...]"` | Color of the progress bar                      |
+| backgroundColor |             string             |   optional   | `"rgba(0,0,0,0.15)"` |                        `"<HEX_COLOR>"` or `"<RGBA_COLOR>"`                        | Background color of the progress bar container |
+|      width      |             string             |   optional   |       `"100%"`       |                     `"100px"` or `"100px"` or `"100rem"`, ...                     | Width of the progress bar                      |
+|     height      |             string             |   optional   |       `"20px"`       |                     `"100px"` or `"100px"` or `"100rem"`, ...                     | Height of the progress bar                     |
+|  borderRadius   | ProgressBarAngularBorderRadius |   optional   |        `"md"`        |               `"square"` or `"sm"` or `"md"` or `"lg"` or `"full"`                | Border Radius of the Progress Bar              |
+| animatedBuffer  |            boolean             |   optional   |        `true`        |                                 `true` or `false`                                 | Sets the buffer progress bar to be animated    |
 
 ## How to Use ##
 
