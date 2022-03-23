@@ -1,11 +1,12 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {ProgressBarAngularBarColor, ProgressBarAngularMode} from './progress-bar-angular.model';
 
 
 @Component({
   selector: 'progress-bar-angular',
   templateUrl: './progress-bar-angular.component.html',
-  styleUrls: ['./progress-bar-angular.component.scss','progress-bar-global.scss']
+  styleUrls: ['./progress-bar-angular.component.scss','progress-bar-global.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ProgressBarAngularComponent implements OnInit {
 
