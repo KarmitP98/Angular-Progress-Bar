@@ -53,6 +53,7 @@ Stackblitz: https://angular-ivy-gnw58u.stackblitz.io
 5. height(optional): Height of the progress bar (10px | 10em | 10% ... etc).
 6. width(optional): Width of the progress bar (10px | 10em | 10% ... etc).
 7. animatedBuffer(optional): Boolean values sets the buffer progress bar to be animated or not.
+8. borderRadius(optional): Border Radius of the Progress Bar.
 
 ## How to Use ##
 

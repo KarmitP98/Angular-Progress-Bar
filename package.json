@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build&publish": "ng build --project Progress-Bar-Angular && cd dist/progress-bar-angular && npm publish"
   },
   "private": true,
   "dependencies": {

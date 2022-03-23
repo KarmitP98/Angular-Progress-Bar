@@ -1,11 +1,15 @@
 import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
-import {ProgressBarAngularBarColor, ProgressBarAngularMode} from './progress-bar-angular.model';
+import {
+  ProgressBarAngularBarColor,
+  ProgressBarAngularBorderRadius,
+  ProgressBarAngularMode
+} from './progress-bar-angular.model';
 
 
 @Component({
   selector: 'progress-bar-angular',
   templateUrl: './progress-bar-angular.component.html',
-  styleUrls: ['./progress-bar-angular.component.scss','progress-bar-global.scss'],
+  styleUrls: ['./progress-bar-angular.component.scss', 'progress-bar-global.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class ProgressBarAngularComponent implements OnInit {
@@ -26,31 +30,36 @@ export class ProgressBarAngularComponent implements OnInit {
    * Input is a string of '#FFFFFF' or 'rgba(r,g,b,a)' or 'linear-gradient(<colors>)'
    * @type {string}
    */
-  @Input() backgroundColor?: string;
+  @Input() backgroundColor?: string = 'rgba(0,0,0,0.15)';
   /**
    * Progress Bar Color.
    * string: Solid Color.
    * string[]: Linear Gradient color.
    * @type {string | string[]}
    */
-  @Input() barColor?: ProgressBarAngularBarColor;
+  @Input() barColor?: ProgressBarAngularBarColor = '#ffffff';
   /**
    * Height of the progress bar.
    * Inputs: '10px' | '10%' | '10rem' | ... etc.
    * @type {string}
    */
-  @Input() height?: string;
+  @Input() height?: string = '20px';
   /**
    * Width of the progress bar.
    * Inputs: '100px' | '100%' | '10rem' | ... etc.
    * @type {string}
    */
-  @Input() width?: string;
+  @Input() width?: string = '100%';
   /**
    * Selector to animate the 'buffer' progress-bar.
    * @type {boolean}
    */
   @Input() animatedBuffer: boolean = true;
+  /**
+   * Border Radius of the progress bar
+   * @type {ProgressBarAngularBorderRadius}
+   */
+  @Input() borderRadius?: ProgressBarAngularBorderRadius = 'md'
 
   progressBarColor = '#000000';
   bufferProgressBarColor = 'repeating-linear-gradient(to bottom right, #000000 0px, #000000 10px, #ffffff 10px, #ffffff 20px)';
@@ -75,8 +84,6 @@ export class ProgressBarAngularComponent implements OnInit {
       const bufferColors = this.barColor.map((value, index) => (`${value} ${index * 10}px, ${value} ${(index + 1) * 10}px`));
       this.bufferProgressBarColor = `repeating-linear-gradient(-45deg, ${bufferColors.join(',')})`;
     }
-    console.log(this.progressBarColor);
-    console.log(this.bufferProgressBarColor);
   };
 
 }
